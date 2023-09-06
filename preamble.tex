@@ -1,0 +1,207 @@
+% packages
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx} 
+\usepackage{subcaption}
+\usepackage{xspace}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+% \usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{listings}
+\usepackage{natbib}
+\usepackage{bbm}
+\usepackage[colorlinks,citecolor=blue,bookmarks=false]{hyperref}
+\geometry{a4paper,total={170mm,257mm},left=20mm,top=20mm}
+
+% shortcuts for bold characters (vectors, matrices)
+\newcommand{\ba}{\mathbf{a}}\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bb}{\mathbf{b}}\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bc}{\mathbf{c}}\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bd}{\mathbf{d}}\newcommand{\bD}{\mathbf{D}}
+\newcommand{\be}{\mathbf{e}}\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bff}{\mathbf{f}}\newcommand{\bF}{\mathbf{F}} %\bf already taken
+\newcommand{\bg}{\mathbf{g}}\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bh}{\mathbf{h}}\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bi}{\mathbf{i}}\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bj}{\mathbf{j}}\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bk}{\mathbf{k}}\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bl}{\mathbf{l}}\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bm}{\mathbf{m}}\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bn}{\mathbf{n}}\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bo}{\mathbf{o}}\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bp}{\mathbf{p}}\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bq}{\mathbf{q}}\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\br}{\mathbf{r}}\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bs}{\mathbf{s}}\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bt}{\mathbf{t}}\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bu}{\mathbf{u}}\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bv}{\mathbf{v}}\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bw}{\mathbf{w}}\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bx}{\mathbf{x}}\newcommand{\bX}{\mathbf{X}}
+\newcommand{\by}{\mathbf{y}}\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bz}{\mathbf{z}}\newcommand{\bZ}{\mathbf{Z}}
+
+% shortcuts for bold numbers
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\bone}{\mathbf{1}}
+
+% shortcuts for bold greek characters (vectors, matrices)
+\newcommand{\balpha}{\boldsymbol{\alpha}}\newcommand{\bAlpha}{\boldsymbol{\Alpha}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}\newcommand{\bBeta}{\boldsymbol{\Beta}}
+\newcommand{\bgamma}{\boldsymbol{\gamma}}\newcommand{\bGamma}{\boldsymbol{\Gamma}}
+\newcommand{\bdelta}{\boldsymbol{\delta}}\newcommand{\bDelta}{\boldsymbol{\Delta}}
+\newcommand{\bepsilon}{\boldsymbol{\epsilon}}\newcommand{\bEpsilon}{\boldsymbol{\Epsilon}}
+\newcommand{\bzeta}{\boldsymbol{\zeta}}\newcommand{\bZeta}{\boldsymbol{\Zeta}}
+\newcommand{\beeta}{\boldsymbol{\eta}}\newcommand{\bEta}{\boldsymbol{\Eta}} % \beta already taken
+\newcommand{\btheta}{\boldsymbol{\theta}}\newcommand{\bTheta}{\boldsymbol{\Theta}}
+\newcommand{\biota}{\boldsymbol{\iota}}\newcommand{\bIota}{\boldsymbol{\Iota}}
+\newcommand{\bkappa}{\boldsymbol{\kappa}}\newcommand{\bKappa}{\boldsymbol{\Kappa}}
+\newcommand{\blambda}{\boldsymbol{\lambda}}\newcommand{\bLambda}{\boldsymbol{\Lambda}}
+\newcommand{\bmu}{\boldsymbol{\mu}}\newcommand{\bMu}{\boldsymbol{\Mu}}
+\newcommand{\bnu}{\boldsymbol{\nu}}\newcommand{\bNu}{\boldsymbol{\Nu}}
+\newcommand{\bxi}{\boldsymbol{\xi}}\newcommand{\bXi}{\boldsymbol{\Xi}}
+\newcommand{\bomikron}{\boldsymbol{\omikron}}\newcommand{\bOmikron}{\boldsymbol{\Omikron}}
+\newcommand{\bpi}{\boldsymbol{\pi}}\newcommand{\bPi}{\boldsymbol{\Pi}}
+\newcommand{\brho}{\boldsymbol{\rho}}\newcommand{\bRho}{\boldsymbol{\Rho}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}\newcommand{\bSigma}{\boldsymbol{\Sigma}}
+\newcommand{\btau}{\boldsymbol{\tau}}\newcommand{\bTau}{\boldsymbol{\Tau}}
+\newcommand{\bypsilon}{\boldsymbol{\ypsilon}}\newcommand{\bYpsilon}{\boldsymbol{\Ypsilon}}
+\newcommand{\bphi}{\boldsymbol{\phi}}\newcommand{\bPhi}{\boldsymbol{\Phi}}
+\newcommand{\bchi}{\boldsymbol{\chi}}\newcommand{\bChi}{\boldsymbol{\Chi}}
+\newcommand{\bpsi}{\boldsymbol{\psi}}\newcommand{\bPsi}{\boldsymbol{\Psi}}
+\newcommand{\bomega}{\boldsymbol{\omega}}\newcommand{\bOmega}{\boldsymbol{\Omega}}
+
+% shortcuts for blackboard bold characters (eg, number sets)
+\newcommand{\nA}{\mathbb{A}}
+\newcommand{\nB}{\mathbb{B}}
+\newcommand{\nC}{\mathbb{C}}
+\newcommand{\nD}{\mathbb{D}}
+\newcommand{\nE}{\mathbb{E}}
+\newcommand{\nF}{\mathbb{F}}
+\newcommand{\nG}{\mathbb{G}}
+\newcommand{\nH}{\mathbb{H}}
+\newcommand{\nI}{\mathbb{I}}
+\newcommand{\nJ}{\mathbb{J}}
+\newcommand{\nK}{\mathbb{K}}
+\newcommand{\nL}{\mathbb{L}}
+\newcommand{\nM}{\mathbb{M}}
+\newcommand{\nN}{\mathbb{N}}
+\newcommand{\nO}{\mathbb{O}}
+\newcommand{\nP}{\mathbb{P}}
+\newcommand{\nQ}{\mathbb{Q}}
+\newcommand{\nR}{\mathbb{R}}
+\newcommand{\nS}{\mathbb{S}}
+\newcommand{\nT}{\mathbb{T}}
+\newcommand{\nU}{\mathbb{U}}
+\newcommand{\nV}{\mathbb{V}}
+\newcommand{\nW}{\mathbb{W}}
+\newcommand{\nX}{\mathbb{X}}
+\newcommand{\nY}{\mathbb{Y}}
+\newcommand{\nZ}{\mathbb{Z}}
+
+% shortcuts for calligraphic characters (sets, index sets, ...)
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+% references to figures, sections, algorithms, equations, tables
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\eqnref}[1]{Eq.~\eqref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+
+% standard math operators
+\DeclareMathOperator*{\argmax}{argmax~}
+\DeclareMathOperator*{\argmin}{argmin~}
+\DeclareMathOperator*{\softmax}{softmax}
+\DeclareMathOperator*{\sgn}{sgn}
+\DeclareMathOperator*{\Tr}{Tr}
+\DeclareMathOperator*{\Bias}{Bias}
+\DeclareMathOperator*{\Var}{Var}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\Perplexity}{Perplexity}
+
+% mathcal / mathbf shortcuts
+\def\mc{\mathcal}
+\def\mb{\mathbf}
+
+% total derivative
+\def\diff{\mathrm{d}}
+
+% statistical independence symbol (_||_)
+\newcommand{\Perp}{\perp\!\!\! \perp}
+
+% shortcuts for: \eg, \ie, \cf, \etc, \vs, \wrt, \dof, \etal, \iid
+\makeatletter
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
+\def\eg{e.g\onedot} \def\Eg{E.g\onedot}
+\def\ie{i.e\onedot} \def\Ie{I.e\onedot}
+\def\cf{cf\onedot} \def\Cf{Cf\onedot}
+\def\etc{etc\onedot}
+\def\vs{vs\onedot}
+\def\wrt{wrt\onedot}
+\def\dof{d.o.f\onedot}
+\def\etal{et~al\onedot}
+\def\iid{i.i.d\onedot}
+\def\eos{\texttt{\textless EOS\textgreater}}
+\makeatother
+
+% nice url font and color
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+% custom color definitions
+\definecolor{darkred}{rgb}{0.8,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.7}
+\definecolor{darkpurple}{rgb}{0.4,0,0.6}
+\definecolor{lightgray}{rgb}{0.92,0.92,0.92}
+\definecolor{lightpink}{rgb}{1.00,0.90,0.90}
+
+% ellis colors
+\definecolor{ellisred}{rgb}{0.87,0.44,0.38}
+\definecolor{ellisgreen}{rgb}{0.69,0.90,0.52}
+\definecolor{elliscyan}{rgb}{0.29,0.77,0.74}
+\definecolor{ellisorange}{rgb}{0.89,0.55,0.28}
+\definecolor{ellisblue}{rgb}{0.41,0.61,0.86}
+
+% command for comments / red highlighting
+\newcommand{\red}[1]{\noindent{\color{red}{#1}}}
+\newcommand{\white}[1]{\noindent{\color{white}{#1}}}
+\newcommand{\green}[1]{\noindent{\color{darkgreen}{#1}}}
+\newcommand{\blue}[1]{\noindent{\color{darkblue}{#1}}}
+
+% commands for ellis colors
+\newcommand{\ellisred}[1]{\noindent{\color{ellisred}{#1}}}
+\newcommand{\ellisgreen}[1]{\noindent{\color{ellisgreen}{#1}}}
+\newcommand{\elliscyan}[1]{\noindent{\color{elliscyan}{#1}}}
+\newcommand{\ellisorange}[1]{\noindent{\color{ellisorange}{#1}}}
+\newcommand{\ellisblue}[1]{\noindent{\color{ellisblue}{#1}}}
